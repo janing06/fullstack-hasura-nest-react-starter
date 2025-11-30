@@ -1,0 +1,19 @@
+{
+  "paths": {
+    "@app/*": ["src/app/*"],
+    "@entities/*": ["src/entities/*"],
+    "@pages/*": ["src/pages/*"],
+    "@shared/*": ["src/shared/*"],
+    "@widgets/*": ["src/widgets/*"],
+    "@features/*": ["src/features/*"]
+  },
+  "entry": "src/app/main.tsx",
+  "ignore": [
+    "steiger.config.ts"
+    // List currently unused shared components here
+    // TODO: Remove them here once they'll already be used
+  ],
+  "ignoreDependencies": [
+    // List currently unused dependencies here
+  ]
+}
