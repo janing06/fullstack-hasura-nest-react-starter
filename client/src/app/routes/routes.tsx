@@ -1,7 +1,11 @@
+import {
+	AuthorizedGuard,
+	NotAuthorizedGuard,
+	NotFoundGuard,
+} from '@app/guards';
+import { HomePageContainer } from '@pages/home-page';
+import { paths } from '@shared/paths';
 import { Outlet, type RouteObject } from 'react-router-dom';
-import { HomePageContainer } from '../../pages/home-page';
-import { paths } from '../../shared/paths';
-import { AuthorizedGuard, NotAuthorizedGuard, NotFoundGuard } from '../guards';
 
 export const routes: RouteObject[] = [
 	{
