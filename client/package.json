@@ -13,7 +13,14 @@
 		"lint": "biome lint --diagnostic-level=error --no-errors-on-unmatched",
 		"lint:fix": "biome lint --write --no-errors-on-unmatched",
 		"format": "biome format --write --no-errors-on-unmatched",
-		"check-all": "npm run ts-check && npm run lint && npm run steiger && npm run knip"
+		"check-all": "npm run ts-check && npm run lint && npm run steiger && npm run knip",
+		"lint-staged": "lint-staged"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"npm run lint:fix",
+			"npm run format"
+		]
 	},
 	"dependencies": {
 		"react": "^19.2.0",
@@ -26,6 +33,7 @@
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react": "^5.1.1",
 		"knip": "^5.70.2",
+		"lint-staged": "^16.2.7",
 		"steiger": "^0.5.11",
 		"typescript": "~5.9.3",
 		"vite": "^7.2.4"
